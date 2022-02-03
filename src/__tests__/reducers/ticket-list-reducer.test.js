@@ -4,11 +4,13 @@ describe('ticketListReducer', () => {
 
   let action;
   const currentState = {
-    1: {names: 'Ryan & Aimen',
+    1: {
+    names: 'Ryan & Aimen',
     location: '4b',
     issue: 'Redux action is not working correctly.',
     id: 1 },
-    2: {names: 'Jasmine and Justine',
+    2: {
+    names: 'Jasmine and Justine',
     location: '2a',
     issue: 'Reducer has side effects.',
     id: 2 }
@@ -19,7 +21,6 @@ describe('ticketListReducer', () => {
     issue: 'Redux action is not working correctly.',
     id: 1
   }
-
 
   test('Should return default state if there is no action type passed into the reducer', () => {
     expect(ticketListReducer({}, { type: null })).toEqual({});
@@ -48,7 +49,7 @@ describe('ticketListReducer', () => {
 
   test('Should successfully delete a ticket', () => {
     action = {
-      types: 'DELETE_TICKET',
+      type: 'DELETE_TICKET',
       id: 1
     };
     expect(ticketListReducer(currentState, action)).toEqual({
