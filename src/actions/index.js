@@ -4,5 +4,5 @@ export const deleteTicket = id => ({
 });
 
 export const toggleForm = () => ({
-
+  type: 'TOGGLE_FORM'
 });
