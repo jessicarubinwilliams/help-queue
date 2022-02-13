@@ -28,4 +28,12 @@ describe('help queue actions', () => {
       id: 1
     });
   });
+
+  test('updateTime should create UPDATE_TIME action', () => {
+    expect(actions.updateTime(1, "A few seconds")).toEqual({
+      type: constants.UPDATE_TIME,
+      id: 1,
+      formattedWaitTime: "A few seconds"
+    });
+  });
 });
