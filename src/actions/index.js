@@ -21,5 +21,7 @@ export const addTicket = (ticket) => {
 }
 
 export const updateTime = (id, formattedWaitTime) => ({
-  
+  type: constants.UPDATE_TIME,
+  id: id,
+  formattedWaitTime: formattedWaitTime
 });
